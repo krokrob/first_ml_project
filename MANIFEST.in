@@ -1,0 +1,3 @@
+graft first_ml_project
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  first_ml_project/jupy *
