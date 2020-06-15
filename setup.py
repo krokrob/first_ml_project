@@ -12,5 +12,5 @@ setup(name='first_ml_project',
       test_suite = 'tests',
       # include_package_data: to install data from MANIFEST.in
       include_package_data=True,
-      scripts=['scripts/first_ml_project-run'],
+      scripts=['scripts/first_ml_project-run', 'scripts/first_ml_project-computedist'],
       zip_safe=False)

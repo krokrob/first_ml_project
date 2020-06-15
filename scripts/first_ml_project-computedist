@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Import from the standard library
+from os.path import split
+import argparse
+
+# Import from Python liraries
+from termcolor import colored
+
+# Import from first_ml_project
+import first_ml_project
+from first_ml_project.distance import haversine
+
+if __name__ == '__main__':
+    description = 'stkrgcp_description'
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument('--coords',
+                        nargs='+',
+                        help='start point and finish point coordinates under the format: lng1 lat1 lng2 lat2',
+                        required=False)
+    parser.add_argument('--prod',
+                        action='store_true',
+                        default=False,
+                        help='Example here')
+    args = parser.parse_args()
+    lon1, lat1, lon2, lat2 = args.coords
+    dist = haversine(float(lon1), float(lat1), float(lon2), float(lat2))
+    print(colored("###### Distance ######", "blue"))
+    print(colored(f'{dist} km', "red"))
+
