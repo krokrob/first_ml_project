@@ -19,4 +19,4 @@ def test_clean_data():
     assert out.shape == (985, 119)
 
 def try_me():
-    print('Hi peeps, sorry I am AFK')
+    return 'Hi peeps, sorry I am AFK'
