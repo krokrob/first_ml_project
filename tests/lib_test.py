@@ -17,3 +17,6 @@ def test_clean_data():
     assert df.shape == (999, 142)
     out = clean_data(df)
     assert out.shape == (985, 119)
+
+def try_me():
+    print('Hi peeps, sorry I am AFK')
